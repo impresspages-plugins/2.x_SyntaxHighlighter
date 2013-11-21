@@ -1,0 +1,14 @@
+.ipCode {
+    height: 300px;
+    width: 100%;
+}
+
+
+.syntaxhighlighter {
+  overflow: hidden !important;
+}
+
+.syntaxhighlighter table td.code .line {
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+}
