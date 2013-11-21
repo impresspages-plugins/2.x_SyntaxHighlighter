@@ -1,10 +1,10 @@
 # SyntaxHighlighter plugin
 
-Code syntax highlighter widgetfor ImpressPages CMS, based on SyntxHighlighter script.
+Code syntax highlighter widget for ImpressPages CMS, based on SyntxHighlighter script.
 
 ## Features
 
-Allows code highlighting for html, css, js, php and sql. 
+Allows code highlighting for html, css, js, php and sql languages. 
 Single line highlighting and line numbering features.
 
 ## Install
