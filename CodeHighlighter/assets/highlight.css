@@ -1,0 +1,37 @@
+.ipCode {
+    height: 300px;
+    width: 100%;
+}
+
+
+.syntaxhighlighter {
+    overflow: hidden !important;
+}
+
+.syntaxhighlighter table td.code .line {
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+}
+
+.syntaxhighlighter
+{
+    background-color: #DCC !important;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+.syntaxhighlighter .line .number
+{
+    color: white !important;
+    background-color: #DCC !important;
+}
+/* First line */
+.syntaxhighlighter .line.alt1
+{
+    background-color: #DCC !important;
+}
+
+/* Second line */
+.syntaxhighlighter .line.alt2
+{
+    background-color: #DCC !important;
+}

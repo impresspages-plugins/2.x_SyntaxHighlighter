@@ -1,13 +1,42 @@
 <?php
-namespace Modules\code\highlight\widget;
-
-if (!defined('CMS')) exit;
+namespace Plugin\CodeHighlight\Widget\CodeHighlight;
 
 
-class ipCodeHighlight extends \Modules\standard\content_management\Widget {
-
+class Controller extends \Ip\WidgetController
+{
 
     const DEFAULT_MODE = '0';
+
+    public function generateHtml($revisionId, $widgetId, $instanceId, $data, $skin)
+    {
+
+        if (!isset($data['code'])){
+            $data['code'] = '';
+        }
+
+        if (!isset($data['mode'])){
+            $data['mode'] = self::DEFAULT_MODE;
+        }
+
+        if (!isset($data['hlLine'])){
+            $data['hlLine'] = '1';
+        }
+
+
+        if (!isset($data['showLines'])){
+            $data['showLines'] = 'false';
+        }else{
+            if ($data['showLines']){
+                $data['showLines'] = 'true';
+            }else{
+                $data['showLines'] = 'false';
+            }
+        }
+
+        $data['syntax'] = $this->getSyntax($data['mode']);
+
+        return parent::generateHtml($revisionId, $widgetId, $instanceId, $data, $skin);
+    }
 
     public function previewHtml($instanceId, $data, $layout) {
 
@@ -69,8 +98,10 @@ class ipCodeHighlight extends \Modules\standard\content_management\Widget {
      * Sets title in management area
      * @return string
      */
-    public function getTitle() {
-        return 'Code highlight';
+
+    public function getTitle()
+    {
+        return __('Code highlight', 'ipAdmin', false);
     }
 
     protected function getSyntaxes() {

@@ -1,8 +1,5 @@
-<?php
-if (!defined('CMS')) exit; //restrict direct access to file
-?>
 <pre class="brush: <?php
-print $this->esc($syntax);
+print esc($syntax);
 ?>,
     auto-links: false,
     toolbar: false,
@@ -15,11 +12,11 @@ print $this->esc($syntax);
     }
 ?>
     gutter: <?php
-print $this->esc($showLines);
+print esc($showLines);
 ?>"><?php
-    print $this->esc($code);
+    print esc($code);
     ?></pre>
-<?php if ($site->managementState()) { ?>
+<?php if (ipIsManagementState()) { ?>
     <script>
         if (typeof SyntaxHighlighter !== 'undefined'){
             SyntaxHighlighter.highlight();
