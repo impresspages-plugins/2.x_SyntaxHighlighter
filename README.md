@@ -9,9 +9,9 @@ Single line highlighting and line numbering features.
 
 ## Install
 
-1. Upload the `code` folder to your website's `ip_plugins` folder.
+1. Upload the `CodeHighlighter` folder to your website's `Plugin` folder.
 2. Login to the administration area.
-3. Go to `Developer -> Modules` tab, and press `Install` button.
+3. Go to `Plugin` panel, and press `Activate` button.
 
 
 ## Usage
